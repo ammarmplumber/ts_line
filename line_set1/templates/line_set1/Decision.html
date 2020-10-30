@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Decision
+{% endblock %}
+
+{% block content %}
+
+    <p style="color:red">Maximum payoff: 12</p>
+
+    {% formfield player.decision label="What color do you choose?" %}
+
+
+    {% next_button %}
+
+    {% include Constants.instructions_new_template %}
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% load otree %}
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+    <h3>
+        Instructions - Set 8
+    </h3>
+
+    <p>
+        This is Set #8 of ten sets of five rounds--a total of 50 rounds.
+    </p>
+
+    <p>
+        In this study, you will be in a randomly formed group
+        of {{ Constants.players_per_group }} participants. Each participant in
+        the group may choose one of three colors: red, blue, or yellow. Your
+        payoff at the end of each round depends on the color you choose and the
+        colors chosen by the other participants.
+    </p>
+    <p>
+        For the following set of five rounds, the maximum payoff you can earn per round is $28.
+        The payoffs may change between sets.
+    </p>
+
+    <p>
+        The diagram displayed below portrays the information flow between
+        the {{ Constants.players_per_group }} participants. Each participant
+        will only see the colors chosen by participants they are connected to
+        by a black line. At the end of each round, you (the blue dot) will
+        see the colors chosen by the participants represented by green dots.
+        You will know your only own payoff, not the payoffs of any others.
+    </p>
+    
+        {% if player.id_in_group == 1 %}
+            <img align="middle" src="https://i.imgur.com/7nF0mIF.png" width="300px" />
+        {% elif player.id_in_group == 2 %}
+            <img align="middle" src="https://i.imgur.com/3rZpQvm.png" width="300px" />
+        {% elif player.id_in_group == 3 %}
+            <img align="middle" src="https://i.imgur.com/JEIkYI2.png" width="300px" />
+        {% elif player.id_in_group == 4 %}
+            <img align="middle" src="https://i.imgur.com/PwNRsK2.png" width="300px" />
+        {% else %}
+            ERROR
+        {% endif %}
+
+
+    </div>
+</div>
+
