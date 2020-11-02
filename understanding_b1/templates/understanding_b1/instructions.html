@@ -1,0 +1,56 @@
+{% load otree %}
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+    <p>
+        This is Block #1 of five blocks of ten rounds each--a total of 50 rounds.
+    </p>
+
+    <p>
+        In this study, you will be in a randomly formed group of {{ Constants.players_per_group }} participants. 
+        Each participant in the group may choose one of three colors: green, purple, or yellow. Your
+        payoff at the end of each round depends on the color you choose and the colors chosen by the 
+        other participants.
+    </p>
+    <p>
+        For the following block of five rounds, the maximum payoff you can earn per round is $12.
+    </p>
+
+    <p>
+        The diagram below portrays the information flow between
+        the {{ Constants.players_per_group }} participants. You 
+        {% if player.id_in_group == 1 %}
+            (Player Q)
+        {% elif player.id_in_group == 2 %}
+            (Player R)
+        {% elif player.id_in_group == 3 %}
+            (Player T)
+        {% elif player.id_in_group == 4 %}
+            (Player S)
+        {% else %}
+            ERROR
+        {% endif %}
+        will only see the colors chosen by the participants who are 
+        connected to you by a line in the displayed diagram.
+        You will know only your own payoff, not the payoffs of any other participants.
+    </p>
+
+    
+        {% if player.id_in_group == 1 %}
+            <img align="middle" src="https://i.imgur.com/7nF0mIF.png" width="300px" />
+        {% elif player.id_in_group == 2 %}
+            <img align="middle" src="https://i.imgur.com/3rZpQvm.png" width="300px" />
+        {% elif player.id_in_group == 3 %}
+            <img align="middle" src="https://i.imgur.com/JEIkYI2.png" width="300px" />
+        {% elif player.id_in_group == 4 %}
+            <img align="middle" src="https://i.imgur.com/PwNRsK2.png" width="300px" />
+        {% else %}
+            ERROR
+        {% endif %}
+
+
+
+
+    </div>
+</div>
+

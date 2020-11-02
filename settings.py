@@ -23,8 +23,8 @@ SESSION_CONFIGS = [
     dict(
         name='line',
         display_name="Line",
-        num_demo_participants=4,
-        app_sequence=['survey','line_instruc_comprehen_set1','line_set1'
+        num_demo_participants=8,
+        app_sequence=['understanding_b1','block1'
                       ],
     )
 ]
